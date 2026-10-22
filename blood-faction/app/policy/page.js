@@ -1,6 +1,6 @@
 // app/policy/page.js
 export const metadata = {
-  title: '적운 - 사이트 규정 및 보안 정책',
+  title: '블러드 - 사이트 규정 및 보안 정책',
 };
 
 export default function PolicyPage() {
@@ -16,7 +16,7 @@ export default function PolicyPage() {
         <section className="space-y-4">
           <h2 className="text-xl font-semibold text-white border-l-4 border-red-600 pl-3">제 1조 (목적 및 관리 권한)</h2>
           <p className="text-sm leading-relaxed text-zinc-400">
-            본 규정은 가상 롤플레잉(Role-Playing) 게임의 일부 조직인 '적운'(이하 "조직")이 활용하는 웹사이트 및 디스코드 연동 서비스의 이용 조건, 개인정보 수집 및 보안 정책을 규정함을 목적으로 합니다. 
+            본 규정은 가상 롤플레잉(Role-Playing) 게임의 일부 조직인 '블러드'(이하 "조직")이 활용하는 웹사이트 및 디스코드 연동 서비스의 이용 조건, 개인정보 수집 및 보안 정책을 규정함을 목적으로 합니다. 
             <br /><br />
             <strong className="text-zinc-200">본 웹사이트의 시스템 구축, 데이터베이스(DB) 보안 및 전반적인 사이트 운영 관리는 '가나디'가 단독으로 담당합니다.</strong> 본 사이트를 방문하거나 지원서를 제출하는 모든 이용자는 본 규정에 동의한 것으로 간주됩니다.
           </p>
@@ -51,7 +51,7 @@ export default function PolicyPage() {
         <section className="space-y-4">
           <h2 className="text-xl font-semibold text-white border-l-4 border-red-600 pl-3">제 5조 (법적 면책 조항 및 고지사항)</h2>
           <p className="text-sm leading-relaxed text-zinc-400">
-            본 웹사이트와 '적운' 조직은 GTA5 파이브엠(FiveM) 등 게임 내 롤플레잉(Role-Playing)을 목적으로 운영되는 <strong className="text-red-500 font-bold">가상의 단체</strong>입니다. 
+            본 웹사이트와 '블러드' 조직은 GTA5 파이브엠(FiveM) 등 게임 내 롤플레잉(Role-Playing)을 목적으로 운영되는 <strong className="text-red-500 font-bold">가상의 단체</strong>입니다. 
             <br /><br />
             웹사이트 내에 묘사된 '어둠', '보안', '조직' 등의 용어는 모두 게임 세계관 내의 설정일 뿐이며, 현실의 불법 행위, 폭력, 범죄 단체와는 어떠한 연관도 없음을 명확히 밝힙니다. 이용자가 게임 외 현실에서 본 단체의 이름을 사칭하여 발생하는 어떠한 문제에 대해서도 사이트/DB 관리자 '가나디'는 일체의 책임을 지지 않습니다.
           </p>

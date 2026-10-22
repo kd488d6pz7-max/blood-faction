@@ -33,7 +33,7 @@ export async function POST(req) {
     const payload = {
       embeds: [
         {
-          title: "🩸 적운 조직 신규 지원서 도착",
+          title: "🩸 블러드 조직 신규 지원서 도착",
           description: "새로운 조직원 지원서가 접수되었습니다. 내용을 꼼꼼히 확인해주세요.",
           color: 13632027, // 다크 레드
           fields: [

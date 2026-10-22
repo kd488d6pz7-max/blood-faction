@@ -11,11 +11,30 @@ export default function Home() {
   const [siteData, setSiteData] = useState({ intro_text: '', org_chart: '' });
 
   useEffect(() => {
-    // 사이트 접속 시 중복 방지 방문 기록 API 자동 호출
-    fetch('/api/visit', { method: 'POST' }).catch((err) => {
-      console.error('방문 기록 전송 실패:', err);
-    });
+    // 💡 [수정된 부분] 1시간 동안 중복 방문(새로고침) DB 저장 방지 로직
+    const trackVisitor = async () => {
+      const lastVisited = localStorage.getItem('lastVisited');
+      const now = new Date().getTime();
+      const cooldown = 3600000; // 1시간 (밀리초). 24시간으로 하려면 86400000으로 변경하세요.
 
+      // 마지막 방문 기록이 있고, 1시간이 채 지나지 않았다면 함수 종료 (DB API 호출 안 함)
+      if (lastVisited && now - parseInt(lastVisited) < cooldown) {
+        return; 
+      }
+
+      // 1시간이 지났거나 첫 접속일 때만 API 호출하여 DB에 기록
+      try {
+        await fetch('/api/visit', { method: 'POST' });
+        // 호출 성공 후 현재 접속 시간을 브라우저에 저장
+        localStorage.setItem('lastVisited', now.toString());
+      } catch (err) {
+        console.error('방문 기록 전송 실패:', err);
+      }
+    };
+
+    trackVisitor(); // 방문자 추적 실행
+
+    // --- 기존 이미지/데이터 불러오기 로직 유지 ---
     const fetchImages = async () => {
       const { data } = await supabase.from('activity_images').select('*').order('id', { ascending: true });
       if (data) {
@@ -58,8 +77,8 @@ export default function Home() {
         className="relative z-10 h-screen flex flex-col items-center justify-center px-4 pointer-events-none"
         style={{ opacity: titleOpacity, y: titleY }}
       >
-        <h1 className="text-7xl sm:text-9xl font-extrabold text-red-700 tracking-[0.2em] mb-4 drop-shadow-2xl">적운</h1>
-        <p className="text-xl sm:text-3xl text-gray-300 font-light tracking-widest uppercase">적운이 도시를 지배한다</p>
+        <h1 className="text-7xl sm:text-9xl font-extrabold text-red-700 tracking-[0.2em] mb-4 drop-shadow-2xl">블러드</h1>
+        <p className="text-xl sm:text-3xl text-gray-300 font-light tracking-widest uppercase">블러드가 도시를 지배한다</p>
       </motion.div>
 
       {/* 컨텐츠 영역 */}

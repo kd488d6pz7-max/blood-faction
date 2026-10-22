@@ -118,7 +118,7 @@ export default function AdminPage() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md bg-black/40 p-8 rounded-2xl border border-red-950 shadow-2xl backdrop-blur-xl">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-red-600 mb-2">JEOGUN ADMIN</h1>
-            <p className="text-gray-400 text-sm">적운 조직 관리자 보안 인증</p>
+            <p className="text-gray-400 text-sm">블러드 조직 관리자 보안 인증</p>
           </div>
           <form onSubmit={handleVerifyOtp} className="space-y-4">
             <input type="text" maxLength={6} placeholder="000000" className="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-center text-white text-2xl tracking-[0.5em] focus:border-red-500 transition-all outline-none" value={code} onChange={(e) => setCode(e.target.value)} />
@@ -137,7 +137,7 @@ export default function AdminPage() {
         {/* 상단 타이틀 및 로그아웃 */}
         <div className="flex justify-between items-center border-b border-red-900/40 pb-6">
           <div>
-            <h2 className="text-3xl font-bold text-white">적운 관리자 패널</h2>
+            <h2 className="text-3xl font-bold text-white">블러드 관리자 패널</h2>
             <p className="text-gray-400 text-sm mt-1">지원서 관리, 팩션 소개글 및 조직도 설정</p>
           </div>
           <button onClick={() => { setIsLoggedIn(false); setCode(''); }} className="px-4 py-2 border border-red-900/50 text-red-400 hover:bg-red-900/30 rounded-lg text-sm font-bold transition-colors">로그아웃</button>
@@ -157,10 +157,10 @@ export default function AdminPage() {
           />
         </div>
 
-        {/* 2. 적운 조직도 수정 섹션 */}
+        {/* 2. 블러드 조직도 수정 섹션 */}
         <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl text-red-500 font-bold">적운 조직도 수정</h3>
+            <h3 className="text-xl text-red-500 font-bold">블러드 조직도 수정</h3>
             <button onClick={handleSaveSettings} className="bg-red-800/80 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition">변경사항 저장</button>
           </div>
           <textarea 

@@ -3,8 +3,8 @@ import './globals.css';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "적운 - JEOGUN",
-  description: "적운이 도시를 지배한다",
+  title: "블러드 - Blood is the ruler of the city",
+  description: "블러드가 도시를 지배한다",
   icons: {
     icon: "/logo.png",
   },
@@ -22,9 +22,9 @@ export default function RootLayout({ children }) {
               
               {/* 좌측 로고 */}
               <div className="flex-shrink-0">
-                <Link href="/" className="text-2xl font-bold text-red-600 tracking-widest hover:text-red-500 transition-colors">
-                  적운
-                </Link>
+                <a href="/#" className="text-2xl font-bold text-red-600 tracking-widest hover:text-red-500 transition-colors">
+                  블러드
+                </a>
               </div>
               
               {/* 우측 메뉴 및 버튼들 (오류 없는 표준 href 앵커 링크 방식) */}
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
         <footer className="relative z-50 text-zinc-500 text-xs py-8 px-6 sm:px-16 lg:px-32 border-t border-red-900/30 bg-[#0a0a0a] mt-auto">
           <div className="max-w-6xl mx-auto space-y-4">
             <div>
-              <p className="font-semibold text-zinc-400">적운 사이트</p>
+              <p className="font-semibold text-zinc-400">블러드 사이트</p>
             </div>
 
             <div className="space-y-2 leading-relaxed text-zinc-600">

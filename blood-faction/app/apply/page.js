@@ -60,7 +60,7 @@ export default function ApplyPage() {
         >
           <div className="mb-10 text-center border-b border-white/10 pb-8">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-6 drop-shadow-lg">
-              적운 조직 지원서
+              블러드 조직 지원서
             </h2>
             <div className="text-gray-200 text-sm sm:text-base space-y-2 text-left bg-black/30 border border-white/10 p-6 rounded-xl inline-block backdrop-blur-md shadow-inner">
               <p className="font-bold text-red-400 mb-3 text-lg border-b border-white/10 pb-2">필수 자격 요건</p>
@@ -158,7 +158,7 @@ export default function ApplyPage() {
             </div>
 
             <div>
-              <label className="block text-gray-100 mb-2 font-semibold drop-shadow-md">적운을 지원하게 된 계기 *</label>
+              <label className="block text-gray-100 mb-2 font-semibold drop-shadow-md">블러드을 지원하게 된 계기 *</label>
               <textarea 
                 required name="motive" rows="2"
                 className="w-full p-3 bg-black/20 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:bg-black/40 resize-none transition-all backdrop-blur-sm shadow-inner"
@@ -179,7 +179,7 @@ export default function ApplyPage() {
               type="submit" 
               className="w-full py-4 mt-8 bg-red-600/90 hover:bg-red-500 text-white text-lg font-bold rounded-lg transition-all shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:shadow-[0_0_25px_rgba(220,38,38,0.6)] backdrop-blur-md"
             >
-              적운 조직 지원서 제출하기
+              블러드 조직 지원서 제출하기
             </button>
             
             {status && (
